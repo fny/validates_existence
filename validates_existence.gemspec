@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tanel Suurhans", "Tarmo Lehtpuu"]
-  s.date = "2013-09-05"
+  s.date = "2013-11-01"
   s.description = "A library for validating model association existence."
   s.email = ["tanel.suurhans@perfectline.ee", "tarmo.lehtpuu@perfectline.ee"]
   s.extra_rdoc_files = [
@@ -23,14 +23,46 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/perfectline/validates_existence/tree/master"
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.3"
+  s.rubygems_version = "2.0.6"
   s.summary = "Validates Rails model belongs_to association existence."
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
-    s.add_runtime_dependency(%q<activerecord>, [">= 0"])
+
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<validates_existence>, [">= 0"])
+      s.add_runtime_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<appraisal>, [">= 1.0.0.beta"])
+      s.add_development_dependency(%q<appraisal>, [">= 1.0.0.beta"])
+      s.add_development_dependency(%q<appraisal>, [">= 1.0.0.beta"])
+      s.add_development_dependency(%q<minitest>, ["~> 4.0"])
+      s.add_runtime_dependency(%q<activerecord>, [">= 3.0.0"])
+      s.add_development_dependency(%q<appraisal>, [">= 1.0.0.beta"])
+      s.add_development_dependency(%q<minitest>, ["~> 4.0"])
+      s.add_development_dependency(%q<sqlite3>, [">= 0"])
+    else
+      s.add_dependency(%q<validates_existence>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<appraisal>, [">= 1.0.0.beta"])
+      s.add_dependency(%q<appraisal>, [">= 1.0.0.beta"])
+      s.add_dependency(%q<appraisal>, [">= 1.0.0.beta"])
+      s.add_dependency(%q<minitest>, ["~> 4.0"])
+      s.add_dependency(%q<activerecord>, [">= 3.0.0"])
+      s.add_dependency(%q<appraisal>, [">= 1.0.0.beta"])
+      s.add_dependency(%q<minitest>, ["~> 4.0"])
+      s.add_dependency(%q<sqlite3>, [">= 0"])
+    end
   else
-    s.add_dependency(%q<activerecord>, [">= 0"])
+    s.add_dependency(%q<validates_existence>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<appraisal>, [">= 1.0.0.beta"])
+    s.add_dependency(%q<appraisal>, [">= 1.0.0.beta"])
+    s.add_dependency(%q<appraisal>, [">= 1.0.0.beta"])
+    s.add_dependency(%q<minitest>, ["~> 4.0"])
+    s.add_dependency(%q<activerecord>, [">= 3.0.0"])
+    s.add_dependency(%q<appraisal>, [">= 1.0.0.beta"])
+    s.add_dependency(%q<minitest>, ["~> 4.0"])
+    s.add_dependency(%q<sqlite3>, [">= 0"])
   end
 end
 
