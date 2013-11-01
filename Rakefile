@@ -1,3 +1,4 @@
+require "rubygems"
 require "rake"
 require "rake/testtask"
 require "rake/clean"
@@ -17,7 +18,10 @@ begin
     jewel.description = "A library for validating model association existence."
     jewel.authors     = ["Tanel Suurhans", "Tarmo Lehtpuu"]
     jewel.files       = FileList["rails/*.rb", "lib/**/*.rb", "*.rb", "MIT-LICENCE", "README.markdown"]
-    jewel.add_dependency "active_record"
+    jewel.add_dependency "activerecord", ">= 3.0.0"
+    jewel.add_development_dependency "appraisal", ">= 1.0.0.beta"
+    jewel.add_development_dependency "minitest", "~> 4.0"
+    jewel.add_development_dependency "sqlite3"
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
