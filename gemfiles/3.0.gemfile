@@ -2,7 +2,6 @@
 
 source "https://rubygems.org"
 
-gem "jeweler", :git=>"git@github.com:technicalpickles/jeweler.git"
 gem "activerecord", "~> 3.0.20"
 gem "validates_existence", :path=>"../"
 

@@ -1,17 +1,3 @@
-GIT
-  remote: git@github.com:technicalpickles/jeweler.git
-  revision: c0e945c2ae7e8a5783ba724d068de1a039119b21
-  specs:
-    jeweler (1.8.8)
-      builder
-      bundler (~> 1.0)
-      git (>= 1.2.5)
-      github_api (= 0.10.1)
-      highline (>= 1.6.15)
-      nokogiri (= 1.5.10)
-      rake
-      rdoc
-
 PATH
   remote: ..
   specs:
@@ -55,6 +41,15 @@ GEM
     highline (1.6.20)
     httpauth (0.2.0)
     i18n (0.6.5)
+    jeweler (1.8.8)
+      builder
+      bundler (~> 1.0)
+      git (>= 1.2.5)
+      github_api (= 0.10.1)
+      highline (>= 1.6.15)
+      nokogiri (= 1.5.10)
+      rake
+      rdoc
     json (1.8.1)
     jwt (0.1.8)
       multi_json (>= 1.5)
@@ -84,7 +79,6 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 3.2.15)
   appraisal (>= 1.0.0.beta)
-  jeweler!
   minitest (~> 4.0)
   sqlite3
   validates_existence!
