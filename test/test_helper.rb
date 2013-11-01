@@ -14,7 +14,7 @@ ActiveRecord::Base.establish_connection(
         "database" => ":memory:"
 )
 
-require File.join(File.dirname(__FILE__), "..", "..", "lib", "validates_existence")
+require File.join(File.dirname(__FILE__), "..", "lib", "validates_existence")
 
 autoload :Name,                 File.join(File.dirname(__FILE__), "models", "name.rb")
 autoload :User,                 File.join(File.dirname(__FILE__), "models", "user.rb")

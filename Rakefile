@@ -23,9 +23,9 @@ rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end
 
-Rake::TestTask.new(:test_rails31) do |t|
+Rake::TestTask.new(:test) do |t|
   t.libs << "lib"
-  t.libs << "test/rails31"
-  t.pattern = "test/rails31/**/*_test.rb"
+  t.libs << "test"
+  t.pattern = "test/**/*_test.rb"
   t.verbose = true
 end

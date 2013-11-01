@@ -1,4 +1,4 @@
-require 'test_helper.rb'
+require 'test_helper'
 
 class TestValidatesExistence < Test::Unit::TestCase
 
@@ -110,7 +110,7 @@ class TestValidatesExistence < Test::Unit::TestCase
   end
 
   def test_message_with_i18n
-    I18n.load_path << File.expand_path("./test/shared/locales/pt.yml")
+    I18n.load_path << File.expand_path("./test/locales/pt.yml")
     I18n.backend.send(:init_translations)
     I18n.locale = :pt
 
